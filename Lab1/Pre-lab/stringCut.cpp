@@ -11,6 +11,6 @@ void cutString(string s, int index){
     if(s.empty() || index > s.size()){
         cout << "";
         return;
-    }
+    }//empty string or index exceeds string size
     cout << s.substr(index);
 }

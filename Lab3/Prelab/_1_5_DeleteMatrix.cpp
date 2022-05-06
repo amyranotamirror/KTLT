@@ -3,6 +3,13 @@ using namespace std;
 
 void deleteMatrix(int**& matrix, int r) {
     // TODO;
+    if(r <= 0) {
+        matrix = NULL;
+        return;}
+    for(int i = 0; i < r; i++){
+        delete [] matrix[i];
+    }
+    delete []matrix;
     matrix = NULL;
 }
 

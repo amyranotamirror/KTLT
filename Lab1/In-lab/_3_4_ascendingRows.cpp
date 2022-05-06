@@ -10,11 +10,10 @@ int ascendingRows(int arr[][1000], int row, int col) {
     int result = 0;
     for(int r = 0; r < row; r++){
         int prev = arr[r][0];
-        bool tick = false;
         for(int c = 1; c < col; c++){
             if(arr[r][c] > prev) {
-                if(c == col - 1) result++;
-                else prev = arr[r][c];
+                if(c == col - 1) result++;//ascending order
+                else prev = arr[r][c];//update previous value
             }
             else break;
         }

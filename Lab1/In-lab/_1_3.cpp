@@ -20,7 +20,7 @@ void process(const char *name, char *outstr) {
     int index = 0, space = 0;
     //Saving the new s-tring to outs-tring
     for(; *f; f++){
-        if(isalpha(*f) || space == 0 && *f == ' ') {
+        if(isalpha(*f) || space == 0 && *f == ' ') {//nonspace character or first single space before each alphabetical character
             if(*f == ' ') {
                 space = 1; //flag this everytime we get a single space
                 outstr[index++] = *f;//Simply append this into the new s-tring

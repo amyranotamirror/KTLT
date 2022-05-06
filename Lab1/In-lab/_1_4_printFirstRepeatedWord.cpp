@@ -14,7 +14,7 @@ void printFirstRepeatedWord(char str[]) {
         return;
     }
 
-    n_words++; //Since we initialize number of words to 0, we need to increase it by 1 as regard to the first word before a ' '
+    n_words++; //Since we initialized number of words to 0, we need to increase it by 1 as regard to the first word before a ' '
     int places[n_words]; //array size of number of words storing address
     places[0] = 0; //first word is located at 0
     //Store places where each word starts
@@ -33,7 +33,7 @@ void printFirstRepeatedWord(char str[]) {
                 p1++; p2++;
             }
 
-            if(*p1 == ' ' && !isalpha(*p2)){ //when the word (i) reach its end, if the word (j) is not a blankspace nor endofword => this is not a matching word
+            if(*p1 == ' ' && !isalpha(*p2)){ //when the word (i) reach its end, the word (j) is also a blankspace or endofword => this is a matching word
                 //if j is the last word, we limit it with strlen; otherwise, limit it with the next word 
                 for(int index = places[j]; index < strlen(str)*(n_words-1 == j) + (places[j+1])*(n_words-1 != j); index++){
                     cout << str[index]; //print the result
